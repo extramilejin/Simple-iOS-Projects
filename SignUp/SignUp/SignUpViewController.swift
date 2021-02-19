@@ -26,6 +26,15 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.present(self.imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func touchUpSignCancelButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func touchUpSignNextButton(_ sender: UIButton) {
+        let signUpUserInfoViewController = SignUpUserInfoViewController()
+        self.navigationController?.pushViewController(signUpUserInfoViewController, animated: true)
+    }
+    
     //MARK: Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
