@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WVT-qV-TEz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--EV 충전소 정보-->
+        <scene sceneID="1tv-vl-Tzn">
+            <objects>
+                <tableViewController title="EV 충전소 정보" id="G17-ke-sh8" customClass="EVTableViewController" customModule="EVMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5uw-1r-EPa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="evCell" rowHeight="80" id="1lW-PS-FbC" customClass="EVTableViewCell" customModule="EVMap" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1lW-PS-FbC" id="2Do-Tu-Yso">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypi-6o-XgX">
+                                            <rect key="frame" x="30" y="11" width="354" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZH-4T-rkU">
+                                            <rect key="frame" x="30" y="41" width="354" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rZH-4T-rkU" firstAttribute="leading" secondItem="2Do-Tu-Yso" secondAttribute="leadingMargin" constant="10" id="4Nc-PX-aT2"/>
+                                        <constraint firstItem="Ypi-6o-XgX" firstAttribute="top" secondItem="2Do-Tu-Yso" secondAttribute="topMargin" id="Ayl-Kz-9HJ"/>
+                                        <constraint firstItem="rZH-4T-rkU" firstAttribute="top" secondItem="2Do-Tu-Yso" secondAttribute="topMargin" constant="30" id="FEo-uu-xq4"/>
+                                        <constraint firstItem="Ypi-6o-XgX" firstAttribute="leading" secondItem="2Do-Tu-Yso" secondAttribute="leadingMargin" constant="10" id="Vl4-et-abg"/>
+                                        <constraint firstItem="rZH-4T-rkU" firstAttribute="top" secondItem="Ypi-6o-XgX" secondAttribute="bottom" id="htc-pK-SLB"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ypi-6o-XgX" secondAttribute="trailing" constant="10" id="raP-HV-wSM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rZH-4T-rkU" secondAttribute="trailing" constant="10" id="uL5-Aw-QBg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="rZH-4T-rkU" secondAttribute="bottom" id="upi-TX-GeR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="EVStatAddrLabel" destination="rZH-4T-rkU" id="X2T-ta-Rjm"/>
+                                    <outlet property="EVStatNm" destination="Ypi-6o-XgX" id="x6g-45-JzD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="G17-ke-sh8" id="g19-bl-mHO"/>
+                            <outlet property="delegate" destination="G17-ke-sh8" id="qWw-up-79N"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="1Zi-dM-H0e"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qvB-Qz-gNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837.68115942028987" y="-45.535714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X0w-l2-RB9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WVT-qV-TEz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5m2-yh-ZbB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="G17-ke-sh8" kind="relationship" relationship="rootViewController" id="icB-O9-eCg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cG-y1-ycH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72.463768115942031" y="-45.535714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
