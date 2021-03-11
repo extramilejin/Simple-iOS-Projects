@@ -13,7 +13,7 @@ class EVTableViewController: UITableViewController, XMLParserDelegate, MTMapView
     var onParsing: Bool = false
     var currentElement = ""
     var elementCount = 0
-    let eCarKey = "95aQ2Xdbq9w%2BeE%2BdTJQh6AAppckV9W1sz1UYDGn9UYjRnpqwU32eOdSovNy%2F1GI%2BcqEkXaQ4pRq7ZnI8LMXX7Q%3D%3D"
+    let eCarKey = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         let strURL = "http://apis.data.go.kr/B552584/EvCharger/getChargerInfo?serviceKey=\(eCarKey)&numOfRows=10&pageNo=1"
