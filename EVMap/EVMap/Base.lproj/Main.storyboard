@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -63,6 +64,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvB-Qz-gNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="837.68115942028987" y="-45.535714285714285"/>
+        </scene>
+        <!--충전소 세부정보-->
+        <scene sceneID="vkd-Ij-vjU">
+            <objects>
+                <viewController storyboardIdentifier="EVStationDetail" id="Noh-cR-paE" customClass="EVStationDetailViewController" customModule="EVMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FQW-gH-Pyw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FMT-9G-tOu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="충전소 세부정보" id="xzc-ig-hEV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XiX-yT-sd5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1809" y="-46"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="X0w-l2-RB9">

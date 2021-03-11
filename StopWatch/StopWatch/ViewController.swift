@@ -35,8 +35,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             mainStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateMainTimer, userInfo: nil, repeats: true)
             lapStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateLapTimer, userInfo: nil, repeats: true)
             
-            RunLoop.current.add(mainStopwatch.timer, forMode: RunLoop.Mode.common)
-            RunLoop.current.add(lapStopwatch.timer, forMode: RunLoop.Mode.common)
+//            RunLoop.current.add(mainStopwatch.timer, forMode: RunLoop.Mode.common)
+//            RunLoop.current.add(lapStopwatch.timer, forMode: RunLoop.Mode.common)
             
             isPlay = true
             changeButton(sender, "Stop", .red)
@@ -116,7 +116,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if stopwatch.counter.truncatingRemainder(dividingBy: 60) < 10 {
           seconds = "0" + seconds
         }
+        
         label.text = minutes + ":" + seconds
+        
+        
     }
     
     

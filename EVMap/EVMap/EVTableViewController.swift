@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EVTableViewController: UITableViewController, XMLParserDelegate {
+class EVTableViewController: UITableViewController, XMLParserDelegate, MTMapViewDelegate {
     var evStations: [EVStation] = []
     var currentEVStation: EVStation?
     var onParsing: Bool = false
@@ -49,6 +49,8 @@ class EVTableViewController: UITableViewController, XMLParserDelegate {
             case "statNm": currentEVStation!.statNm = parseString
             case "statId": currentEVStation!.statId = parseString
             case "addr": currentEVStation!.addr = parseString
+            case "lat": currentEVStation!.lat = Double(parseString)!
+            case "lng": currentEVStation!.lng = Double(parseString)!
             default: break
             }
         }
@@ -74,6 +76,16 @@ class EVTableViewController: UITableViewController, XMLParserDelegate {
         cell.EVStatNm.text = evStations[indexPath.row].statNm
         cell.EVStatAddrLabel.text = evStations[indexPath.row].addr
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = evStations[indexPath.row]
+        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "EVStationDetail") as? EVStationDetailViewController else {
+            return
+        }
+        vc.param = row
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
 
