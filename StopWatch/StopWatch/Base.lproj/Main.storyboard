@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8eO-aO-BQK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8fJ-lv-aU8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,22 +8,38 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Stopwatch-->
+        <!--타이머-->
+        <scene sceneID="irb-sM-l03">
+            <objects>
+                <viewController title="타이머" id="ClG-C9-9cR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rNb-by-k2j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TXN-r1-ve6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="타이머" image="timer" catalog="system" id="UL6-rj-UGH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZs-96-YZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1633" y="1232"/>
+        </scene>
+        <!--스톱워치-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="stopwatch" title="Stopwatch" id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stopwatch" title="스톱워치" id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjY-O3-0jD">
-                                <rect key="frame" x="197" y="188" width="137" height="20"/>
+                                <rect key="frame" x="197" y="144" width="137" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyO-39-HN6">
-                                <rect key="frame" x="80" y="208" width="254" height="80"/>
+                                <rect key="frame" x="80" y="164" width="254" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="Qjj-hE-0jZ"/>
                                 </constraints>
@@ -32,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PnG-wm-nZZ">
-                                <rect key="frame" x="0.0" y="388" width="414" height="474"/>
+                                <rect key="frame" x="0.0" y="344" width="414" height="469"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lapCell" rowHeight="70" id="Flq-eC-Wac" customClass="LapTableViewCell" customModule="StopWatch" customModuleProvider="target">
@@ -78,7 +94,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxO-IZ-2L0">
-                                <rect key="frame" x="125" y="323" width="39" height="30"/>
+                                <rect key="frame" x="125" y="279" width="39" height="30"/>
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
@@ -87,7 +103,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kj0-JS-aa0">
-                                <rect key="frame" x="255" y="323" width="34" height="30"/>
+                                <rect key="frame" x="255" y="279" width="34" height="30"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" systemColor="systemGreenColor"/>
                                 </state>
@@ -117,6 +133,7 @@
                             <constraint firstItem="zyO-39-HN6" firstAttribute="top" secondItem="QjY-O3-0jD" secondAttribute="bottom" id="w0T-VX-HbF"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="스톱워치" image="stopwatch.fill" catalog="system" id="d7D-hJ-nJy"/>
                     <navigationItem key="navigationItem" title="Stopwatch" id="r3C-Qj-MxF"/>
                     <connections>
                         <outlet property="lapResetButton" destination="JxO-IZ-2L0" id="o64-wT-jLW"/>
@@ -128,36 +145,289 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="695.6521739130435" y="78.348214285714278"/>
+            <point key="canvasLocation" x="1632" y="550"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="NmX-cW-zt9">
+        <!--Tab Bar Controller-->
+        <scene sceneID="3d5-e3-AIp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8eO-aO-BQK" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8fJ-lv-aU8" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A4A-Hv-mqT">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r7j-rY-U7e">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="b85-99-xf9" kind="relationship" relationship="viewControllers" id="1sP-iq-iZz"/>
+                        <segue destination="g5m-T2-7K1" kind="relationship" relationship="viewControllers" id="eiX-Ys-59f"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="yTr-d5-fd7"/>
+                        <segue destination="ClG-C9-9cR" kind="relationship" relationship="viewControllers" id="ae9-Fh-u0p"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ef-Og-MKd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="-133"/>
+        </scene>
+        <!--알람-->
+        <scene sceneID="vQw-Vz-BEe">
+            <objects>
+                <viewController id="g5m-T2-7K1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q4I-TI-vkX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YkU-OA-QXW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="알람" image="alarm.fill" catalog="system" id="Zae-7M-2ce"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZN-ur-zr2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1633" y="-133"/>
+        </scene>
+        <!--세계 시계-->
+        <scene sceneID="Fml-RY-kol">
+            <objects>
+                <viewController id="vXS-WC-8pk" customClass="WorldTimeViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tkm-Ba-3Bd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yc7-mW-rqN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="S6V-uC-vyG">
+                                    <rect key="frame" x="0.0" y="196" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WTTitleCell" rowHeight="60" id="Ysg-V8-gBP">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ysg-V8-gBP" id="5bI-9N-XCa">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세계 시계" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f8-nL-qcn">
+                                                    <rect key="frame" x="20" y="11" width="92" height="38"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8f8-nL-qcn" firstAttribute="top" secondItem="5bI-9N-XCa" secondAttribute="topMargin" id="Exg-OQ-8OI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8f8-nL-qcn" secondAttribute="bottom" id="aCd-Wk-Oeb"/>
+                                                <constraint firstItem="8f8-nL-qcn" firstAttribute="leading" secondItem="5bI-9N-XCa" secondAttribute="leadingMargin" id="ggX-YB-Rwy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WTCell" id="er7-xF-xt3" customClass="WorldTimeTableViewCell" customModule="StopWatch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="88" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="er7-xF-xt3" id="xrK-eD-XGL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5PF-u7-t3G">
+                                                    <rect key="frame" x="20" y="11" width="100" height="58"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gde-mk-UVx">
+                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="15" id="Fuy-tF-bkN"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" systemColor="systemGray3Color"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도시 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vd-R9-35E">
+                                                            <rect key="frame" x="0.0" y="23" width="100" height="35"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="6lW-6X-JeL"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="8vd-R9-35E" secondAttribute="bottom" id="0DZ-hU-yhy"/>
+                                                        <constraint firstItem="8vd-R9-35E" firstAttribute="leading" secondItem="5PF-u7-t3G" secondAttribute="leading" id="IS7-pe-BBW"/>
+                                                        <constraint firstAttribute="trailing" secondItem="gde-mk-UVx" secondAttribute="trailing" id="e6k-kD-rKB"/>
+                                                        <constraint firstAttribute="width" constant="100" id="jYQ-Vn-Rs5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8vd-R9-35E" secondAttribute="trailing" id="nzz-QF-KY4"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1uu-ht-v4z">
+                                                    <rect key="frame" x="314" y="29" width="67" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMV-BI-tZs">
+                                                            <rect key="frame" x="0.0" y="0.0" width="29.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRp-ZC-8yz">
+                                                            <rect key="frame" x="37.5" y="0.0" width="29.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5PF-u7-t3G" firstAttribute="leading" secondItem="xrK-eD-XGL" secondAttribute="leadingMargin" id="OGQ-s0-2Gi"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5PF-u7-t3G" secondAttribute="bottom" id="oNq-Fa-boz"/>
+                                                <constraint firstItem="5PF-u7-t3G" firstAttribute="top" secondItem="xrK-eD-XGL" secondAttribute="topMargin" id="tU3-YN-cvU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cityNameLabel" destination="8vd-R9-35E" id="v5r-Hh-KBL"/>
+                                            <outlet property="meridiemLabel" destination="PMV-BI-tZs" id="ABU-1L-eO2"/>
+                                            <outlet property="timeDifferenceLabel" destination="gde-mk-UVx" id="FiS-ms-x6B"/>
+                                            <outlet property="timeLabel" destination="nRp-ZC-8yz" id="40H-Hb-oM7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8QS-Z7-mLE"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="Yc7-mW-rqN" firstAttribute="top" secondItem="8QS-Z7-mLE" secondAttribute="top" id="3Uv-ty-eLy"/>
+                            <constraint firstItem="8QS-Z7-mLE" firstAttribute="trailing" secondItem="Yc7-mW-rqN" secondAttribute="trailing" id="KnA-TG-DYx"/>
+                            <constraint firstItem="8QS-Z7-mLE" firstAttribute="bottom" secondItem="Yc7-mW-rqN" secondAttribute="bottom" id="Kuz-z0-BYv"/>
+                            <constraint firstItem="Yc7-mW-rqN" firstAttribute="bottom" secondItem="8QS-Z7-mLE" secondAttribute="bottom" id="dKS-qF-HXn"/>
+                            <constraint firstItem="Yc7-mW-rqN" firstAttribute="leading" secondItem="8QS-Z7-mLE" secondAttribute="leading" id="hPW-K1-5Du"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="세계 시계" id="tfW-2O-8ZY">
+                        <barButtonItem key="leftBarButtonItem" title="편집" id="2pa-6i-fy2">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="irh-Pz-Vga">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <connections>
+                                <segue destination="P48-l7-FHc" kind="show" id="vv9-NY-Gks"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLS-U8-xMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2543.4782608695655" y="-855.13392857142856"/>
+        </scene>
+        <!--Add World Time View Controller-->
+        <scene sceneID="cpC-ab-eWj">
+            <objects>
+                <viewController id="P48-l7-FHc" customClass="AddWorldTimeViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sXC-wl-grO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xaU-ia-9cp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddWTCell" id="rOQ-eD-e2F" customClass="AddWorldTimeTableViewCell" customModule="StopWatch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rOQ-eD-e2F" id="C5a-QP-6Rx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="도시, 국가" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Px-IP-I6g">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7Px-IP-I6g" secondAttribute="bottom" id="DVm-nh-RGH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7Px-IP-I6g" secondAttribute="trailing" id="fGh-De-ncU"/>
+                                                <constraint firstItem="7Px-IP-I6g" firstAttribute="top" secondItem="C5a-QP-6Rx" secondAttribute="topMargin" id="hXI-xI-krd"/>
+                                                <constraint firstItem="7Px-IP-I6g" firstAttribute="leading" secondItem="C5a-QP-6Rx" secondAttribute="leadingMargin" id="kjd-a0-nnW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addWTCityNameLabel" destination="7Px-IP-I6g" id="zB9-BM-Ned"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sQU-XO-8TR"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xaU-ia-9cp" firstAttribute="top" secondItem="sQU-XO-8TR" secondAttribute="top" id="VxJ-pO-1yo"/>
+                            <constraint firstItem="xaU-ia-9cp" firstAttribute="leading" secondItem="sQU-XO-8TR" secondAttribute="leading" id="XTI-0u-bj1"/>
+                            <constraint firstItem="sQU-XO-8TR" firstAttribute="trailing" secondItem="xaU-ia-9cp" secondAttribute="trailing" id="b6g-UZ-4WW"/>
+                            <constraint firstItem="sQU-XO-8TR" firstAttribute="bottom" secondItem="xaU-ia-9cp" secondAttribute="bottom" id="ize-VC-fVm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rIg-1g-8SR"/>
+                    <connections>
+                        <outlet property="addWTTableView" destination="xaU-ia-9cp" id="2an-m6-bZc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OQo-96-E2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3313.04347826087" y="-855.13392857142856"/>
+        </scene>
+        <!--세계 시계-->
+        <scene sceneID="PFm-Te-SHO">
+            <objects>
+                <navigationController title="세계 시계" automaticallyAdjustsScrollViewInsets="NO" id="b85-99-xf9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="세계 시계" image="globe" catalog="system" selectedImage="globe" id="9H2-QG-J1z">
+                        <color key="badgeColor" systemColor="systemOrangeColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2YD-Nk-MCw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="W4w-Pn-TDk"/>
+                        <segue destination="vXS-WC-8pk" kind="relationship" relationship="rootViewController" id="3jP-di-KG1"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bew-Hq-qRC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6be-7y-aCD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-214.49275362318843" y="78.348214285714278"/>
+            <point key="canvasLocation" x="1633.3333333333335" y="-855.13392857142856"/>
         </scene>
     </scenes>
     <resources>
+        <image name="alarm.fill" catalog="system" width="124" height="128"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="stopwatch.fill" catalog="system" width="121" height="128"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

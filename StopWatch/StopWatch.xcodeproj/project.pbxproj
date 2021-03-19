@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E32CB66D25FDD248007B964B /* WorldTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CB66C25FDD248007B964B /* WorldTimeViewController.swift */; };
+		E32CB67025FDEB5B007B964B /* WorldTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CB66F25FDEB5B007B964B /* WorldTimeTableViewCell.swift */; };
+		E32CB67725FDF236007B964B /* AddWorldTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CB67625FDF236007B964B /* AddWorldTimeViewController.swift */; };
+		E32CB67A25FDF30A007B964B /* AddWorldTimeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32CB67925FDF30A007B964B /* AddWorldTimeTableViewCell.swift */; };
 		E3F97E3225EE640300AB01BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F97E3125EE640300AB01BF /* AppDelegate.swift */; };
 		E3F97E3425EE640300AB01BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F97E3325EE640300AB01BF /* SceneDelegate.swift */; };
 		E3F97E3625EE640300AB01BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F97E3525EE640300AB01BF /* ViewController.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E32CB66C25FDD248007B964B /* WorldTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTimeViewController.swift; sourceTree = "<group>"; };
+		E32CB66F25FDEB5B007B964B /* WorldTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTimeTableViewCell.swift; sourceTree = "<group>"; };
+		E32CB67625FDF236007B964B /* AddWorldTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorldTimeViewController.swift; sourceTree = "<group>"; };
+		E32CB67925FDF30A007B964B /* AddWorldTimeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorldTimeTableViewCell.swift; sourceTree = "<group>"; };
 		E3F97E2E25EE640300AB01BF /* StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F97E3125EE640300AB01BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F97E3325EE640300AB01BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				E3F97E3525EE640300AB01BF /* ViewController.swift */,
+				E32CB67625FDF236007B964B /* AddWorldTimeViewController.swift */,
+				E32CB66C25FDD248007B964B /* WorldTimeViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -104,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				E3F97E6325EF795D00AB01BF /* LapTableViewCell.swift */,
+				E32CB66F25FDEB5B007B964B /* WorldTimeTableViewCell.swift */,
+				E32CB67925FDF30A007B964B /* AddWorldTimeTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -179,7 +191,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3F97E3625EE640300AB01BF /* ViewController.swift in Sources */,
+				E32CB67025FDEB5B007B964B /* WorldTimeTableViewCell.swift in Sources */,
+				E32CB67725FDF236007B964B /* AddWorldTimeViewController.swift in Sources */,
+				E32CB67A25FDF30A007B964B /* AddWorldTimeTableViewCell.swift in Sources */,
 				E3F97E6425EF795D00AB01BF /* LapTableViewCell.swift in Sources */,
+				E32CB66D25FDD248007B964B /* WorldTimeViewController.swift in Sources */,
 				E3F97E3225EE640300AB01BF /* AppDelegate.swift in Sources */,
 				E3F97E4C25EF702800AB01BF /* Stopwatch.swift in Sources */,
 				E3F97E3425EE640300AB01BF /* SceneDelegate.swift in Sources */,

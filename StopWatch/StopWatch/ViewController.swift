@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     // MARK: - Variables
     fileprivate let mainStopwatch: Stopwatch = Stopwatch()

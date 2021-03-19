@@ -25,13 +25,13 @@ class EVStationDetailViewController: UIViewController, MTMapViewDelegate {
             mapView.showCurrentLocationMarker = true
             
             var sample = MTMapCircle()
-            
             let curLat = param!.lat!
             let curLng = param!.lng!
             sample.circleCenterPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: curLat, longitude: curLng))
             sample.circleLineColor = .blue
             sample.circleFillColor = .clear
             sample.circleRadius = 50
+            
             // 지도 중심점 설정
             mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude: curLat, longitude: curLng)),zoomLevel: 2, animated: true)
             poiEVStaion = MTMapPOIItem()

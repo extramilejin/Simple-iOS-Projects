@@ -1,0 +1,7 @@
+platform :ios, '10.0'
+use_frameworks!
+
+target 'SnapKit_Tutorial' do
+  pod 'SwiftLint'
+  pod 'SnapKit', '~> 5.0.0'
+end
