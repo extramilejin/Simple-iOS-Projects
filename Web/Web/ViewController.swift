@@ -21,29 +21,35 @@ class ViewController: UIViewController {
     
     // MARK: - Parmeters
     var urlStr: String = "https://www.naver.com"
+    var webViewObserverList: [NSKeyValueObservation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         urlField.delegate = self
+        urlField.autocorrectionType = .no
         backButton.isEnabled = false
         forwardButton.isEnabled = false
-        
         webView.navigationDelegate = self
-        webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
-        webView.addObserver(self, forKeyPath: "loading", options: .new, context: nil)
+        
+        addWKWebViewObserver()
+        
+//      webView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
+//      webView.addObserver(self, forKeyPath: "loading", options: .new, context: nil)
+        
         webView.load(urlStr)
-        // Do any additional setup after loading the view.
+        
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "loading" {
-          backButton.isEnabled = webView.canGoBack
-          forwardButton.isEnabled = webView.canGoForward
-        } else if keyPath == "estimatedProgress" {
-          progressBar.isHidden = webView.estimatedProgress == 1
-          progressBar.setProgress(Float(webView.estimatedProgress), animated: true)
-        }
-      }
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//        if keyPath == "loading" {
+//          backButton.isEnabled = webView.canGoBack
+//          forwardButton.isEnabled = webView.canGoForward
+//        } else
+//        if keyPath == "estimatedProgress" {
+//          progressBar.isHidden = webView.estimatedProgress == 1
+//          progressBar.setProgress(Float(webView.estimatedProgress), animated: true)
+//        }
+//      }
     
     // MARK: - IBActions
     @IBAction func back(_ sender: Any) {
@@ -55,10 +61,26 @@ class ViewController: UIViewController {
     @IBAction func reload(_ sender: Any) {
         webView.reload()
     }
+    
+    // MARK: - Helper
+    fileprivate func addWKWebViewObserver() {
+        // closure는 self가 해제 될 때까지 기다리고 self는 closure가 해제될 때까지 기다리는 strong reference cycle 상황을 만들어 내게 된다. 이러한 상황을 해결하기 위해 사용하는 것이 [weak self] param in 이다.
+        let loadingObserver = webView.observe(\.isLoading) { [weak self] (webView, _) in
+            guard let strongSelf = self else { return }
+            strongSelf.backButton.isEnabled = webView.canGoBack
+            strongSelf.forwardButton.isEnabled = webView.canGoForward
+        }
+        
+        let progressObserver = webView.observe(\.estimatedProgress) { [weak self] (webView, _) in
+            guard let strongSelf = self else { return }
+            strongSelf.progressBar.isHidden = webView.estimatedProgress == 1
+            strongSelf.progressBar.setProgress(Float(webView.estimatedProgress), animated: true)
+        }
+        webViewObserverList.append(loadingObserver)
+        webViewObserverList.append(progressObserver)
+    }
 
 }
-
-
 
 extension ViewController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
@@ -89,7 +111,6 @@ extension ViewController: UITextFieldDelegate {
 
 extension WKWebView {
   func load(_ urlString: String) {
-    
     if let url = URL(string: urlString) {
       let request = URLRequest(url: url)
       load(request)
